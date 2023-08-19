@@ -1,0 +1,3 @@
+export TAPO_USERNAME="your@email.com"
+export TAPO_PASSWORD="your_tapo_password"
+export TAPO_DEVICE_IP="your_local_device_ip"
