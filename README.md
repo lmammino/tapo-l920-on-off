@@ -30,7 +30,7 @@ The binary requires 3 environment variables to be set:
 
 - `TAPO_USERNAME`: your TAPO email
 - `TAPO_PASSWORD`: your TAPO password
-- `TAPO_DEVICE_IP`: your L920 local IP Address
+- `TAPO_DEVICE_IP`: your L920 device local IP Address
 
 You can use the [`.env~sample`](/.env~sample) example in this repo as a reference.
 
@@ -41,7 +41,51 @@ If you create a `.env` file with the necessary environment variables, you can si
 
 ## Use with an Elgato Stream deck
 
-TODO: I created this script so I can have a shortcut to turn my led strip on and off from my Elgato Stream Deck. I'll write here a quick guide on how to configure yours as well.
+I created this script so I can have a shortcut to turn my led strip on and off from my Elgato Stream Deck.
+
+Below there's a description of my setup, in case you want to do something similar.
+
+> **Note**
+> These instructions have only been tested on a Mac. If you use Windows or Linux, this setup might vary slightly. PRs are welcome to fix any gap that might exist for other OSs.
+
+### 1. Install & configure
+
+- Install the binary by cloning the repo and compiling the binary yourself.
+- Copy the `.env~sample` to `.env` and fill out the details.
+- Execute the `run.sh` script and make sure it works.
+
+### 2. Configure your Stream Deck
+
+#### 2.1 Open your Stream Deck application.
+
+Do it! 😊
+
+#### 2.2 Pick an empty button as your destination and drag a "Multi Action Switch" action onto it
+
+![Drag and drop a "Multi Action Switch" action](./docs/multi-action-switch-drop.gif)
+
+#### 2.3 Select the "Open" action and drop it into the "Multi Action" area (Panel 1). Configure it to run the shell script.
+
+![Configure panel 1 with a run action](./docs/configure-panel1-open-action.gif)
+
+#### 2.4 Switch to Panel 2 and repeat the same process
+
+![Configure panel 2 with a run action](./docs/configure-panel2.gif)
+
+
+#### 2.5 Customise your icons to represent on/off states (optional)
+
+Pick a lightbulb or something like that from the Elgato icon library. Or if you feel brave enough, you can even create your custom icon! 👩‍🎨
+
+
+
+> **Warning**
+> With this approach, I couldn't find any way to update the Stream Deck button in case the state of the led strip changes due to external factors (scheduled activation, activation through app or physical button, etc.), therefore your button status (on/off), might go off sync and show inverted indicators (on when it is actually off and viceversa). In this case, make sure to use the TP-link app or the physical button to bring the led strip to the same state displayed in yours Stream Deck button.
+
+
+## Acknowledgements
+
+Huge thanks to [Mihai Dinculescu](https://crates.io/users/mihai-dinculescu) for their awesome work on the [`tapo` crate](https://crates.io/crates/tapo) which made this project quite trivial to implement.
 
 
 ## Contributing
