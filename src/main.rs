@@ -1,6 +1,6 @@
 use std::env;
 use tapo::ApiClient;
-use tracing::{info, warn};
+use tracing::{debug, info, warn};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -26,7 +26,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
     );
 
-    info!("{:?}", device_info);
+    debug!("{:?}", device_info);
 
     if device_info.overheated {
         warn!("Device is overheated");
