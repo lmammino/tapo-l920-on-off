@@ -41,7 +41,7 @@ If you create a `.env` file with the necessary environment variables, you can si
 
 ## Troubleshooting
 
-If you are experiencing unexpected issues or errors, you can get more insights on what's going on by enabling `DEBUG` logs.
+If you are experiencing unexpected issues or errors, you can get more insights into what's going on by enabling `DEBUG` logs.
 
 You can do that by setting the following environment variable:
 
