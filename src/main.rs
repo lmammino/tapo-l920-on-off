@@ -26,8 +26,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
     );
 
-    debug!("{:?}", device_info);
-
     if device_info.overheated {
         warn!("Device is overheated");
     }

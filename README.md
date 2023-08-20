@@ -39,6 +39,17 @@ Once, these variables are set, just execute the binary and if the led strip is o
 If you create a `.env` file with the necessary environment variables, you can simply run the [`run.sh`](/run.sh) script in this repository.
 
 
+## Troubleshooting
+
+If you are experiencing unexpected issues or errors, you can get more insights on what's going on by enabling `DEBUG` logs.
+
+You can do that by setting the following environment variable:
+
+```bash
+export RUST_LOG=debug
+```
+
+
 ## Use with an Elgato Stream deck
 
 I created this script so I can have a shortcut to turn my led strip on and off from my Elgato Stream Deck.
