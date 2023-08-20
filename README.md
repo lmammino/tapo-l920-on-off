@@ -49,6 +49,8 @@ You can do that by setting the following environment variable:
 export RUST_LOG=debug
 ```
 
+For even more verbose logs you can set the `RUST_LOG` variable to `trace`.
+
 
 ## Use with an Elgato Stream deck
 
